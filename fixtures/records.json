@@ -3,7 +3,7 @@
   "catalogs": {
     "tasks": [
       {
-        "id": "task-1",
+        "id": "task-v1",
         "version": "v1",
         "stages": [
           "plan",
@@ -12,7 +12,7 @@
         ]
       },
       {
-        "id": "task-1",
+        "id": "task-v2",
         "version": "v2",
         "stages": [
           "plan",
@@ -42,7 +42,7 @@
       "id": "h-1",
       "kind": "help-event",
       "learner": "l-1",
-      "task": "task-1",
+      "task": "task-v1",
       "version": "v1",
       "stage": "solve",
       "support": "hint",
@@ -52,7 +52,7 @@
       "id": "h-2",
       "kind": "learner-check",
       "learner": "l-1",
-      "task": "task-1",
+      "task": "task-v1",
       "version": "v1",
       "stage": "solve",
       "check": "tested-example",
@@ -62,7 +62,7 @@
       "id": "h-3",
       "kind": "independent-attempt",
       "learner": "l-1",
-      "task": "task-1",
+      "task": "task-v1",
       "version": "v1",
       "stage": "review",
       "status": "completed"
@@ -71,7 +71,7 @@
       "id": "h-4",
       "kind": "help-event",
       "learner": "l-2",
-      "task": "task-1",
+      "task": "task-v1",
       "version": "v1",
       "stage": "solve",
       "support": "answer",
@@ -81,7 +81,7 @@
       "id": "h-5",
       "kind": "independent-attempt",
       "learner": "l-2",
-      "task": "task-1",
+      "task": "task-v1",
       "version": "v1",
       "stage": "review",
       "status": "not-recorded"
@@ -90,7 +90,7 @@
       "id": "h-6",
       "kind": "support-plan",
       "learner": "l-2",
-      "task": "task-1",
+      "task": "task-v2",
       "version": "v2",
       "stage": "investigate",
       "support": "human",
