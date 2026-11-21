@@ -1,0 +1,32 @@
+{
+  "dataset": "help",
+  "records": [
+    {
+      "id": "h-01",
+      "task": "debug-model",
+      "stage": "plan",
+      "goal": "identify-assumption",
+      "request": "clarifying-question",
+      "check": "independent-explanation",
+      "result": "supported"
+    },
+    {
+      "id": "h-02",
+      "task": "debug-model",
+      "stage": "test",
+      "goal": "identify-assumption",
+      "request": "full-solution",
+      "check": "missing",
+      "result": "unknown"
+    },
+    {
+      "id": "h-03",
+      "task": "write-conclusion",
+      "stage": "review",
+      "goal": "qualify-claim",
+      "request": "counterexample",
+      "check": "revised-claim",
+      "result": "supported"
+    }
+  ]
+}
