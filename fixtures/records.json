@@ -1,32 +1,100 @@
 {
   "dataset": "help",
+  "catalogs": {
+    "tasks": [
+      {
+        "id": "task-1",
+        "version": "v1",
+        "stages": [
+          "plan",
+          "solve",
+          "review"
+        ]
+      },
+      {
+        "id": "task-1",
+        "version": "v2",
+        "stages": [
+          "plan",
+          "investigate",
+          "solve",
+          "review"
+        ]
+      }
+    ],
+    "support-options": [
+      {
+        "id": "hint",
+        "kind": "question-prompt"
+      },
+      {
+        "id": "answer",
+        "kind": "complete-solution"
+      },
+      {
+        "id": "human",
+        "kind": "tutor-session"
+      }
+    ]
+  },
   "records": [
     {
-      "id": "h-01",
-      "task": "debug-model",
-      "stage": "plan",
-      "goal": "identify-assumption",
-      "request": "clarifying-question",
-      "check": "independent-explanation",
-      "result": "supported"
+      "id": "h-1",
+      "kind": "help-event",
+      "learner": "l-1",
+      "task": "task-1",
+      "version": "v1",
+      "stage": "solve",
+      "support": "hint",
+      "at": "2026-09-01T10:00:00"
     },
     {
-      "id": "h-02",
-      "task": "debug-model",
-      "stage": "test",
-      "goal": "identify-assumption",
-      "request": "full-solution",
-      "check": "missing",
-      "result": "unknown"
+      "id": "h-2",
+      "kind": "learner-check",
+      "learner": "l-1",
+      "task": "task-1",
+      "version": "v1",
+      "stage": "solve",
+      "check": "tested-example",
+      "result": "changed-approach"
     },
     {
-      "id": "h-03",
-      "task": "write-conclusion",
+      "id": "h-3",
+      "kind": "independent-attempt",
+      "learner": "l-1",
+      "task": "task-1",
+      "version": "v1",
       "stage": "review",
-      "goal": "qualify-claim",
-      "request": "counterexample",
-      "check": "revised-claim",
-      "result": "supported"
+      "status": "completed"
+    },
+    {
+      "id": "h-4",
+      "kind": "help-event",
+      "learner": "l-2",
+      "task": "task-1",
+      "version": "v1",
+      "stage": "solve",
+      "support": "answer",
+      "at": "2026-09-01T10:05:00"
+    },
+    {
+      "id": "h-5",
+      "kind": "independent-attempt",
+      "learner": "l-2",
+      "task": "task-1",
+      "version": "v1",
+      "stage": "review",
+      "status": "not-recorded"
+    },
+    {
+      "id": "h-6",
+      "kind": "support-plan",
+      "learner": "l-2",
+      "task": "task-1",
+      "version": "v2",
+      "stage": "investigate",
+      "support": "human",
+      "status": "proposed"
     }
   ]
 }
