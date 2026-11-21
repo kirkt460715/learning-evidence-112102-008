@@ -15,5 +15,12 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(len(identifiers), len(set(identifiers)))
         self.assertTrue(all(isinstance(row, dict) for row in data['records']))
 
+    def test_help_events_checks_attempts_and_future_support_share_task_versions(self):
+        data = json.loads((ROOT / 'fixtures' / 'records.json').read_text(encoding='utf-8'))
+        self.assertEqual({row['version'] for row in data['catalogs']['tasks']}, {'v1', 'v2'})
+        kinds = {row['kind'] for row in data['records']}
+        self.assertTrue({'help-event', 'learner-check', 'independent-attempt', 'support-plan'} <= kinds)
+        self.assertTrue(any(row.get('status') == 'not-recorded' for row in data['records']))
+
 if __name__ == '__main__':
     unittest.main()
